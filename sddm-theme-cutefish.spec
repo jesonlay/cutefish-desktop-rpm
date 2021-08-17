@@ -9,11 +9,9 @@
 Name: %{component_name}-cutefish
 #Version: 0.0
 Version: 0.0.0git.%(date +%Y%m%d).%{git_refspec_short}
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPLv3
 Summary: SDDM Theme for Cutefish
-
-BuildRequires: cmake
 
 Requires: sddm
 
@@ -26,19 +24,15 @@ SDDM Theme for Cutefish
 %setup -qn cutefishos-%{component_name}-%{git_refspec_short}
 
 %build
-%{set_build_flags}
-mkdir build
-pushd build
-cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr ..
-make %{?_smp_mflags}
-popd
 
 %install
-pushd build
-%make_install
-popd
-# clean up
-rm -rv %{buildroot}/%{_sysconfdir}
+mkdir -p %{buildroot}/%{_datadir}/sddm/
+cp -rv faces/ %{buildroot}/%{_datadir}/sddm/
+
+mkdir -p %{buildroot}%{_datadir}/sddm/themes/cutefish/
+cp -v *.qml %{buildroot}%{_datadir}/sddm/themes/cutefish/
+cp -v system-shutdown-symbolic.svg %{buildroot}%{_datadir}/sddm/themes/cutefish/
+cp -v theme.conf %{buildroot}%{_datadir}/sddm/themes/cutefish/
 
 %files
 %{_datadir}/sddm/faces/.face.icon
