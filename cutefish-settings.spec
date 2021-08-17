@@ -6,7 +6,7 @@
 
 Name: cutefish-%{component_name}
 Version: 0.3
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPLv3
 Summary: System settings for Cutefish Desktop
 
@@ -23,7 +23,7 @@ Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{ver
 
 %define _patch0_refspec 15e346d0b964b42dbdd8804cf42489a389138993
 Patch0: https://pagure.io/cutefish-desktop-rpm/raw/%{_patch0_refspec}/f/patches/%{name}/0000-use_all_backgrounds.patch
-%define _patch1_refspec 099ed18700baf8cfef508ddadeb5b77324a03f7e
+%define _patch1_refspec 2d90cbfdbe38a18c763309cc7a88f043e3dbb842
 Patch1: https://pagure.io/cutefish-desktop-rpm/raw/%{_patch1_refspec}/f/patches/%{name}/0001-use_fedora_logo.patch
 
 %description
