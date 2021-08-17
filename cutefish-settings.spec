@@ -22,9 +22,9 @@ BuildRequires: fishui-devel
 Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
 
 %define _patch0_refspec 15e346d0b964b42dbdd8804cf42489a389138993
-Patch0: https://pagure.io/cutefish-desktop-rpm/raw/%{_patch0_refspec}/f/patches/%{component_name}/0000-use_all_backgrounds.patch
+Patch0: https://pagure.io/cutefish-desktop-rpm/raw/%{_patch0_refspec}/f/patches/%{name}/0000-use_all_backgrounds.patch
 %define _patch1_refspec 15e346d0b964b42dbdd8804cf42489a389138993
-Patch1: https://pagure.io/cutefish-desktop-rpm/raw/%{_patch1_refspec}/f/patches/%{component_name}/0001-use_fedora_logo.patch
+Patch1: https://pagure.io/cutefish-desktop-rpm/raw/%{_patch1_refspec}/f/patches/%{name}/0001-use_fedora_logo.patch
 
 %description
 The System Settings application for Cutefish Desktop
