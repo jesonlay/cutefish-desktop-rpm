@@ -1,0 +1,13 @@
+diff --git a/src/background.cpp b/src/background.cpp
+index ce47a30..5b5c1b6 100644
+--- a/src/background.cpp
++++ b/src/background.cpp
+@@ -4,7 +4,7 @@
+ static QVariantList getBackgroundPaths()
+ {
+     QVariantList list;
+-    QDirIterator it("/usr/share/backgrounds/cutefishos", QStringList() << "*.jpg" << "*.png", QDir::Files, QDirIterator::Subdirectories);
++    QDirIterator it("/usr/share/backgrounds", QStringList() << "*.jpg" << "*.png", QDir::Files, QDirIterator::Subdirectories);
+     while (it.hasNext()) {
+         QString bg = it.next();
+         list.append(QVariant(bg));
