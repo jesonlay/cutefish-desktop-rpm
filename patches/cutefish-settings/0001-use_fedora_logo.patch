@@ -1,22 +1,27 @@
 diff --git a/src/qml/About/Main.qml b/src/qml/About/Main.qml
-index dc4d0fe..08202d4 100644
+index dc4d0fe..fa67e1f 100644
 --- a/src/qml/About/Main.qml
 +++ b/src/qml/About/Main.qml
 @@ -25,6 +25,8 @@ import Cutefish.Settings 1.0
  import "../"
- 
+
  ItemPage {
 +    property var pixmapsPath: String("file://usr/share/pixmaps")
-+    
++
      headerTitle: qsTr("About")
- 
+
      About {
-@@ -48,7 +50,7 @@ ItemPage {
-                 width: 140
-                 height: 72
+@@ -45,10 +47,10 @@ ItemPage {
+
+             Image {
+                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
+-                width: 140
+-                height: 72
++                width: 150
++                height: 150
                  sourceSize: Qt.size(width, height)
 -                source: "qrc:/images/logo.svg"
-+                source: pixmapsPath + "/fedora_logo.svg"
++                source: pixmapsPath + "/fedora-logo-sprite.svg"
              }
- 
+
              Item {
