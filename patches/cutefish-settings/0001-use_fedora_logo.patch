@@ -16,7 +16,7 @@ index dc4d0fe..08202d4 100644
                  height: 72
                  sourceSize: Qt.size(width, height)
 -                source: "qrc:/images/logo.svg"
-+                source: pixmapsPath + "/fedora-logo-sprite.svg"
++                source: pixmapsPath + "/fedora_logo.svg"
              }
  
              Item {
