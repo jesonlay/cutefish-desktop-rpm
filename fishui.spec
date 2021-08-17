@@ -4,9 +4,13 @@
 
 %define _libdir32 %{_exec_prefix}/lib
 
+%define git_refspec 259818a3d1397875c7e3afc14cd9fcf088a5190e
+%define git_refspec_short %(echo %{git_refspec} | cut -c -7)
+
 Name: fishui
-Version: 0.3
-Release: 0a%{?dist}
+#Version: 0.3
+Version: 0.3git.%(date +%Y%m%d).%{git_refspec_short}
+Release: 1%{?dist}
 License: GPLv3
 Summary: CutefishOS GUI library, based on Qt Quick
 
@@ -16,7 +20,8 @@ BuildRequires: qt5-qtx11extras-devel qt5-qtbase-private-devel qt5-qtquickcontrol
 BuildRequires: kf5-kwindowsystem-devel
 BuildRequires: libxcb-devel xcb-util-wm-devel
 
-Source0: https://github.com/cutefishos/%{name}/archive/refs/tags/%{version}.tar.gz
+#Source0: https://github.com/cutefishos/%%{name}/archive/refs/tags/%%{version}.tar.gz
+Source0: https://github.com/cutefishos/%{name}/tarball/%{git_refspec}#/%{name}-%{git_refspec}.tar.gz
 
 %description
 FishUI is a GUI library based on QQC2 (Qt Quick Controls 2), every Cutefish application uses it
@@ -28,7 +33,8 @@ Requires: %{name} = %{version}-%{release}, cmake
 This package provides files sufficient to build software against %{name}
 
 %prep
-%setup -qn %{name}-%{version}
+#%%setup -qn %%{name}-%%{version}
+%setup -qn cutefishos-%{name}-%{git_refspec_short}
 
 %build
 %{set_build_flags}
