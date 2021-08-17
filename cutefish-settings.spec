@@ -6,7 +6,7 @@
 
 Name: cutefish-%{component_name}
 Version: 0.3
-Release: 0a%{?dist}
+Release: 1%{?dist}
 License: GPLv3
 Summary: System settings for Cutefish Desktop
 
@@ -20,15 +20,20 @@ BuildRequires: fontconfig-devel
 BuildRequires: fishui-devel
 
 Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
-Patch0: 0000-use_all_backgrounds.patch
-Patch1: 0001-use_fedora_logo.patch
+
+%define _patch0_refspec 15e346d0b964b42dbdd8804cf42489a389138993
+Patch0: https://pagure.io/cutefish-desktop-rpm/raw/%{_patch0_refspec}/f/patches/%{component_name}/0000-use_all_backgrounds.patch
+%define _patch1_refspec 15e346d0b964b42dbdd8804cf42489a389138993
+Patch1: https://pagure.io/cutefish-desktop-rpm/raw/%{_patch1_refspec}/f/patches/%{component_name}/0001-use_fedora_logo.patch
 
 %description
 The System Settings application for Cutefish Desktop
 
 %prep
 %setup -qn %{component_name}-%{version}
-patch  -i
+
+patch src/background.cpp -i %{PATCH0}
+patch src/qml/About/Main.qml -i %{PATCH1}
 
 %build
 %{set_build_flags}
