@@ -9,7 +9,7 @@
 Name: %{component_name}-cutefish
 #Version: 0.0
 Version: 0.0.0git.%(date +%Y%m%d).%{git_refspec_short}
-Release: 2%{?dist}
+Release: 3%{?dist}
 License: GPLv3
 Summary: SDDM Theme for Cutefish
 
@@ -26,16 +26,12 @@ SDDM Theme for Cutefish
 %build
 
 %install
-mkdir -p %{buildroot}/%{_datadir}/sddm/
-cp -rv faces/ %{buildroot}/%{_datadir}/sddm/
-
 mkdir -p %{buildroot}%{_datadir}/sddm/themes/cutefish/
 cp -v *.qml %{buildroot}%{_datadir}/sddm/themes/cutefish/
 cp -v system-shutdown-symbolic.svg %{buildroot}%{_datadir}/sddm/themes/cutefish/
 cp -v theme.conf %{buildroot}%{_datadir}/sddm/themes/cutefish/
 
 %files
-%{_datadir}/sddm/faces/.face.icon
 %{_datadir}/sddm/themes/cutefish/FishUIMenu.qml
 %{_datadir}/sddm/themes/cutefish/FishUIMenuItem.qml
 %{_datadir}/sddm/themes/cutefish/Main.qml
