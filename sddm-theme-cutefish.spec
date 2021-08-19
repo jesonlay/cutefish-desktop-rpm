@@ -9,11 +9,13 @@
 Name: %{component_name}-cutefish
 #Version: 0.0
 Version: 0.0.0git.%(date +%Y%m%d).%{git_refspec_short}
-Release: 3%{?dist}
+Release: 1%{?dist}
 License: GPLv3
 Summary: SDDM Theme for Cutefish
 
 Requires: sddm
+Requires: libcutefish >= 0.2git.20210818.4caad74
+Requires: fishui
 
 Source0: https://github.com/cutefishos/%{component_name}/tarball/%{git_refspec}#/%{component_name}-%{git_refspec}.tar.gz
 
