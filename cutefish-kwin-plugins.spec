@@ -6,8 +6,8 @@
 %define _qt5pluginsdir %{_libdir}/qt5/plugins
 
 Name: cutefish-%{component_name}
-Version: 0.3
-Release: 0d%{?dist}
+Version: 0.4
+Release: 1%{?dist}
 License: GPLv3
 Summary: Some configurations and plugins of KWin for Cutefish Desktop
 
@@ -49,5 +49,6 @@ popd
 %{_qt5pluginsdir}/org.kde.kdecoration2/libcutefishdecoration.so
 %{_datadir}/kwin/effects/cutefish_scale
 %{_datadir}/kwin/effects/cutefish_squash
+%{_datadir}/kwin/effects/cutefish_popups/
 %{_datadir}/kwin/scripts/cutefishlauncher
 %{_datadir}/kwin/tabbox/cutefish_thumbnail

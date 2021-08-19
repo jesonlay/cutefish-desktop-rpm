@@ -3,12 +3,13 @@
 %define _disable_source_fetch 0
 
 %define component_name screenlocker
-%define git_refspec dc1f80daf8f6542bf5829d1f13209d79f90b6ae5
-%define git_refspec_short %(echo %{git_refspec} | cut -c -7)
+#%%define git_refspec dc1f80daf8f6542bf5829d1f13209d79f90b6ae5
+#%%define git_refspec_short %%(echo %%{git_refspec} | cut -c -7)
 
 Name: cutefish-%{component_name}
-Version: 0.0.0git.%(date +%Y%m%d).%{git_refspec_short}
-Release: 0a%{?dist}
+Version: 0.4
+#Version: %%{version}git.%%(date +%Y%m%d).%%{git_refspec_short}
+Release: 1%{?dist}
 License: GPLv3
 Summary: System screen locker for Cutefish Desktop
 
@@ -19,15 +20,15 @@ BuildRequires: pam-devel
 
 Provides: bundled(kcheckpass) = 5.22.4
 
-#Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
-Source0: https://github.com/cutefishos/%{component_name}/tarball/%{git_refspec}#/%{component_name}-%{git_refspec}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+#Source0: https://github.com/cutefishos/%%{component_name}/tarball/%%{git_refspec}#/%%{component_name}-%%{git_refspec}.tar.gz
 
 %description
 System screen locker for Cutefish Desktop
 
 %prep
-#%setup -qn %{component_name}-%{version}
-%setup -qn cutefishos-%{component_name}-%{git_refspec_short}
+%setup -qn %{component_name}-%{version}
+#%%setup -qn cutefishos-%%{component_name}-%%{git_refspec_short}
 
 %build
 %{set_build_flags}

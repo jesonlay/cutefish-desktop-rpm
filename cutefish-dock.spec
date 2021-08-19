@@ -5,8 +5,8 @@
 %define component_name dock
 
 Name: cutefish-%{component_name}
-Version: 0.3
-Release: 0b%{?dist}
+Version: 0.4
+Release: 1%{?dist}
 License: GPLv3
 Summary: Desktop Taskbar for Cutefish Desktop
 
@@ -16,6 +16,7 @@ BuildRequires: kf5-kwindowsystem-devel
 BuildRequires: fishui-devel
 
 Requires: libcutefish
+Requires: fishui
 
 Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
 

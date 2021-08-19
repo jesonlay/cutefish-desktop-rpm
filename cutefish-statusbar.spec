@@ -5,8 +5,8 @@
 %define component_name statusbar
 
 Name: cutefish-%{component_name}
-Version: 0.3
-Release: 0b%{?dist}
+Version: 0.4
+Release: 1%{?dist}
 License: GPLv3
 Summary: Top status bar for Cutefish Desktop
 
@@ -15,6 +15,8 @@ BuildRequires: libxcb-devel
 BuildRequires: qt5-qtbase-devel qt5-qtx11extras-devel qt5-qtquickcontrols2-devel qt5-qtsvg-devel qt5-linguist
 BuildRequires: kf5-kwindowsystem-devel
 BuildRequires: fishui-devel
+
+Requires: fishui
 
 Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
 

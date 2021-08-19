@@ -5,19 +5,22 @@
 %define component_name settings
 
 Name: cutefish-%{component_name}
-Version: 0.3
-Release: 3%{?dist}
+Version: 0.4
+Release: 1%{?dist}
 License: GPLv3
 Summary: System settings for Cutefish Desktop
 
 BuildRequires: cmake pkgconfig
 BuildRequires: extra-cmake-modules
+BuildRequires: libXcursor-devel libXi-devel
 BuildRequires: qt5-qtbase-devel qt5-qttools-devel qt5-qtdeclarative-devel qt5-qtx11extras-devel qt5-qtquickcontrols2-devel qt5-linguist
 BuildRequires: kf5-networkmanager-qt-devel kf5-modemmanager-qt-devel
 BuildRequires: libicu-devel
 BuildRequires: freetype-devel
 BuildRequires: fontconfig-devel
 BuildRequires: fishui-devel
+
+Requires: fishui
 
 Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
 

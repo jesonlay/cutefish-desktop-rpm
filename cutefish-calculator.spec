@@ -5,12 +5,13 @@
 %define component_name calculator
 
 Name: cutefish-%{component_name}
-Version: 0.3
-Release: 0a%{?dist}
+Version: 0.4
+Release: 1%{?dist}
 License: GPLv3
 Summary: Calculator for Cutefish Desktop
 
 BuildRequires: cmake
+BuildRequires: pkgconfig(xorg-libinput)
 BuildRequires: qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel qt5-linguist
 
 Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz

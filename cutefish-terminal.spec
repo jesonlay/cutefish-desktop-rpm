@@ -3,12 +3,12 @@
 %define _disable_source_fetch 0
 
 %define component_name terminal
-%define git_refspec ee490280c8499db8152307b2ae025d022dc462a5
-%define git_refspec_short %(echo %{git_refspec} | cut -c -7)
+#%%define git_refspec ee490280c8499db8152307b2ae025d022dc462a5
+#%%define git_refspec_short %%(echo %%{git_refspec} | cut -c -7)
 
 Name: cutefish-%{component_name}
-#Version: 0.0
-Version: 0.0.0git.%(date +%Y%m%d).%{git_refspec_short}
+Version: 0.4
+#Version: 0.0.0git.%%(date +%Y%m%d).%%{git_refspec_short}
 Release: 1%{?dist}
 License: GPLv3
 Summary: A terminal emulator for Cutefish
@@ -19,17 +19,18 @@ BuildRequires: qt5-qtbase-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-dev
 BuildRequires: fishui-devel
 Requires: fishui
 
-Provides: bundled(qmltermwidget) = 0.2.0git.65e75bc6ea589b51c80e5ff3f4008de5644d7cc5
+# the qmltermwidget has been patched by Cutefish team
+Provides: bundled(qmltermwidget) = 0.2.0git.65e75bc+patched.e8b841f
 
-#Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
-Source0: https://github.com/cutefishos/%{component_name}/tarball/%{git_refspec}#/%{component_name}-%{git_refspec}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+#Source0: https://github.com/cutefishos/%%{component_name}/tarball/%%{git_refspec}#/%%{component_name}-%%{git_refspec}.tar.gz
 
 %description
 A terminal emulator for Cutefish
 
 %prep
-#%setup -qn %{component_name}-%{version}
-%setup -qn cutefishos-%{component_name}-%{git_refspec_short}
+%setup -qn %{component_name}-%{version}
+#%%setup -qn cutefishos-%%{component_name}-%%{git_refspec_short}
 
 %build
 %{set_build_flags}
