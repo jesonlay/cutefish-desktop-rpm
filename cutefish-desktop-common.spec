@@ -1,11 +1,11 @@
 Name: cutefish-desktop-common
-Version: 0.20210817.0
+Version: 0.20210819.0
 Release: 1%{?dist}
 License: GPLv3
 Summary: Common packages for Cutefish Desktop
 
 BuildArch: noarch
-Requires: fishui libcutefish
+Requires: libcutefish
 Requires: cutefish-core
 Requires: cutefish-qt-plugins cutefish-kwin-plugins
 Requires: cutefish-icons sddm-theme-cutefish
