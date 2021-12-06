@@ -59,7 +59,7 @@ popd
 %{_datadir}/cutefish-polkit-agent
 %{_datadir}/cutefish-settings-daemon
 %{_datadir}/cutefish-shutdown
-%{_datadir}/polkit-1/actions/org.cutefish.brightness.pkexec.policy
-%{_datadir}/polkit-1/actions/org.cutefish.cpufreq.pkexec.policy
+#%{_datadir}/polkit-1/actions/org.cutefish.brightness.pkexec.policy
+#%{_datadir}/polkit-1/actions/org.cutefish.cpufreq.pkexec.policy
 %{_datadir}/xsessions/cutefish-xsession.desktop
 %{_sysconfdir}/xdg/autostart/cutefish-polkit-agent.desktop
