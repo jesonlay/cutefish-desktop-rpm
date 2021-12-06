@@ -1,11 +1,17 @@
-%if %{fedora} == 34 || %{fedora} == 35
+%if %{fedora} == 34
 %define fl_f34 1
 %else
 %define fl_f34 0
 %endif
 
+%if %{fedora} == 35
+%define fl_f35 1
+%else
+%define fl_f35 0
+%endif
+
 Name: cutefish-desktop
-Version: 0.20210805.6
+Version: 0.20211206.1
 Release: 0a%{?dist}
 License: GPLv3
 Summary: Cutefish Desktop
@@ -23,9 +29,13 @@ Requires: systemd-oomd-defaults
 %endif
 
 # @base-x Packages
-Requires: glx-utils mesa-dri-drivers mesa-vulkan-drivers plymouth-system-theme xorg-x11-drv-amdgpu xorg-x11-drv-ati xorg-x11-drv-evdev xorg-x11-drv-fbdev xorg-x11-drv-intel xorg-x11-drv-libinput xorg-x11-drv-nouveau xorg-x11-drv-openchrome xorg-x11-drv-qxl xorg-x11-drv-vesa xorg-x11-drv-vmware xorg-x11-drv-wacom xorg-x11-server-Xorg xorg-x11-utils xorg-x11-xauth xorg-x11-xinit
+Requires: glx-utils mesa-dri-drivers mesa-vulkan-drivers plymouth-system-theme xorg-x11-drv-amdgpu xorg-x11-drv-ati xorg-x11-drv-evdev xorg-x11-drv-fbdev xorg-x11-drv-intel xorg-x11-drv-libinput xorg-x11-drv-nouveau xorg-x11-drv-openchrome xorg-x11-drv-qxl xorg-x11-drv-vesa xorg-x11-drv-vmware xorg-x11-drv-wacom xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-xinit
 %ifarch armhf aarch64
 Requires: xorg-x11-drv-armsoc
+%endif
+
+%if %{fl_f34}
+Requires: xorg-x11-utils
 %endif
 
 # @input-method Packages
