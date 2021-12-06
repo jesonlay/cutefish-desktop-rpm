@@ -20,7 +20,9 @@ BuildRequires: libepoxy-devel
 
 Requires: kwin
 
-Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+#Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+
+Source0: https://github.com/cutefishos/kwin-plugins/archive/refs/heads/main.zip
 
 %description
 Cutefish Desktop KWin Plugins
