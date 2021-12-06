@@ -42,4 +42,4 @@ popd
 %files
 %{_bindir}/cutefish-dock
 %{_datadir}/cutefish-dock
-%{_etcdir}/cutefish-dock-list.conf
+%{_sysconfdir}/cutefish-dock-list.conf
