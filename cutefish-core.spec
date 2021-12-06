@@ -58,7 +58,7 @@ popd
 %{_bindir}/cutefish-xembedsniproxy
 %{_bindir}/cutefish-gmenuproxy
 %{_bindir}/cutefish-notificationd
-%{_libdir}/systemd/user/cutefish-gmenuproxy.service
+%{_prefix}/lib/systemd/user/cutefish-gmenuproxy.service
 %{_datadir}/cutefish-polkit-agent
 %{_datadir}/cutefish-settings-daemon
 %{_datadir}/cutefish-shutdown
