@@ -7,7 +7,7 @@
 #%%define git_refspec_short %%(echo %%{git_refspec} | cut -c -7)
 
 Name: cutefish-%{component_name}
-Version: 0.4
+Version: 0.5
 #Version: %%{version}git.%%(date +%Y%m%d).%%{git_refspec_short}
 Release: 1%{?dist}
 License: GPLv3

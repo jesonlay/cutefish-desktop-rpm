@@ -5,7 +5,7 @@
 %define component_name statusbar
 
 Name: cutefish-%{component_name}
-Version: 0.4
+Version: 0.5
 Release: 1%{?dist}
 License: GPLv3
 Summary: Top status bar for Cutefish Desktop

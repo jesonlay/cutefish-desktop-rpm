@@ -5,7 +5,7 @@
 %define component_name launcher
 
 Name: cutefish-%{component_name}
-Version: 0.4
+Version: 0.5
 Release: 1%{?dist}
 License: GPLv3
 Summary: Application launcher for Cutefish Desktop

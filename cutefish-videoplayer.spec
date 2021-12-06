@@ -7,8 +7,8 @@
 %define git_refspec_short %(echo %{git_refspec} | cut -c -7)
 
 Name: cutefish-%{component_name}
-#Version: 0.0
-Version: 0.0.0git.%{git_refspec}
+Version: 0.5
+#Version: 0.0.0git.%{git_refspec}
 Release: 0a.extra
 License: GPLv3
 Summary: Cutefish Video Player
@@ -25,8 +25,8 @@ Requires: qqc2-desktop-style
 Requires: kio-extras
 Requires: youtube-dl
 
-#Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
-Source0: https://github.com/cutefishos/%{component_name}/tarball/%{git_refspec}#/%{component_name}-%{git_refspec}.tar.gz
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+#Source0: https://github.com/cutefishos/%{component_name}/tarball/%{git_refspec}#/%{component_name}-%{git_refspec}.tar.gz
 Source1: https://github.com/cutefishos/%{component_name}/raw/%{git_refspec}/cutefish-videoplayer.desktop
 
 %description
