@@ -5,7 +5,7 @@
 %define component_name icons
 
 Name: cutefish-%{component_name}
-Version: 0.4
+Version: 0.5
 Release: 1%{?dist}
 License: GPLv3
 Summary: System default icon theme for Cutefish Desktop
