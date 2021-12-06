@@ -3,7 +3,7 @@
 %define _disable_source_fetch 0
 
 %define component_name sddm-theme
-%define git_refspec 994e1c68746876b370dfc17b96c10266f47c5a67
+%define git_refspec d3722b62c5b87b8bb88a7e2d75dbdefaadc7d1a2
 %define git_refspec_short %(echo %{git_refspec} | cut -c -7)
 
 Name: %{component_name}-cutefish
