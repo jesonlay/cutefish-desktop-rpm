@@ -28,7 +28,7 @@ Source0: https://github.com/cutefishos/kwin-plugins/archive/refs/heads/main.zip
 Cutefish Desktop KWin Plugins
 
 %prep
-%setup -qn %{component_name}-%{version}
+%setup -qn %{component_name}-main
 
 %build
 %{set_build_flags}
