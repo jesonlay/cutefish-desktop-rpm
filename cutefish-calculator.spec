@@ -5,7 +5,7 @@
 %define component_name calculator
 
 Name: cutefish-%{component_name}
-Version: 0.4
+Version: 0.5
 Release: 1%{?dist}
 License: GPLv3
 Summary: Calculator for Cutefish Desktop
