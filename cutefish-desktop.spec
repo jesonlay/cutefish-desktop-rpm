@@ -47,7 +47,7 @@ Requires: ppp ModemManager NetworkManager-adsl NetworkManager-ppp NetworkManager
 
 # @multimedia Packages
 Requires: alsa-ucm alsa-utils gstreamer1-plugin-openh264 gstreamer1-plugins-bad-free gstreamer1-plugins-good gstreamer1-plugins-ugly-free 
-%if %{fl_f34}
+%if %{fl_f34} || %{fl_f35}
 Requires: pipewire-alsa pipewire-gstreamer pipewire-pulseaudio pipewire-utils
 %else
 Requires: alsa-plugins-pulseaudio pulseaudio 
