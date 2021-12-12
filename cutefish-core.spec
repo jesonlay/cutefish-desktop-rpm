@@ -24,8 +24,8 @@ BuildRequires: fishui-devel
 Requires: pulseaudio-daemon
 Requires: fishui
 
-#Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
-Source0: https://github.com/cutefishos/kwin-plugins/archive/refs/heads/main.zip
+Source0: https://github.com/cutefishos/%{component_name}/archive/refs/tags/%{version}.tar.gz
+
 
 %description
 System components, backend, and session files for the Cutefish Desktop
