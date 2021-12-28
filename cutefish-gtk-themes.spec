@@ -21,7 +21,7 @@ new gtk theme for gtk app
 %setup -qn %{component_name}-%{version}
 
 %build
-cmake .
+cmake -D CMAKE_INSTALL_PREFIX=/usr .
 %make_build
 
 %install
