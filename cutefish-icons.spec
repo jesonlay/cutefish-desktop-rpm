@@ -22,7 +22,7 @@ Crule, the system default icon theme for Cutefish Desktop, based on vinceliuice'
 %setup -qn %{component_name}-%{version}
 
 %build
-cmake .
+cmake -DCMAKE_INSTALL_PREFIX=/usr .
 %make_build
 
 %install
