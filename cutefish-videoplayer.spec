@@ -33,8 +33,8 @@ Source1: https://github.com/cutefishos/%{component_name}/raw/%{git_refspec}/cute
 An open source video player built with Qt/QML and libmpv. Based on haruna
 
 %prep
-#%setup -qn %{component_name}-%{version}
-%setup -qn cutefishos-%{component_name}-%{git_refspec_short}
+%setup -qn %{component_name}-%{version}
+#%setup -qn cutefishos-%{component_name}-%{git_refspec_short}
 
 %build
 %{set_build_flags}
