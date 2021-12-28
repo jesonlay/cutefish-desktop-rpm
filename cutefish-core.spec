@@ -18,7 +18,7 @@ BuildRequires: libXcursor-devel
 BuildRequires: xcb-util-devel xcb-util-image-devel xcb-util-keysyms-devel libXtst-devel xorg-x11-drv-libinput-devel xorg-x11-server-devel xorg-x11-drv-synaptics-devel
 BuildRequires: pulseaudio-libs-devel
 BuildRequires: qt5-qtbase-devel qt5-qtx11extras-devel qt5-qttools-devel qt5-qtdeclarative-devel qt5-qtquickcontrols2-devel
-BuildRequires: kf5-kwindowsystem-devel kf5-kcoreaddons-devel
+BuildRequires: kf5-kwindowsystem-devel kf5-kcoreaddons-devel kf5-kidletime-devel
 BuildRequires: fishui-devel
 
 Requires: pulseaudio-daemon
