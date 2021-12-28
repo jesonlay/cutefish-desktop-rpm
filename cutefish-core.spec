@@ -5,7 +5,7 @@
 %define component_name core
 
 Name: cutefish-%{component_name}
-Version: 0.5
+Version: 0.7
 Release: 1%{?dist}
 License: GPLv3
 Summary: System components, backend, and session files for Cutefish Desktop
