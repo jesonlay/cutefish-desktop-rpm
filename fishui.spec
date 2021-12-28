@@ -8,7 +8,7 @@
 #%%define git_refspec_short %%(echo %%{git_refspec} | cut -c -7)
 
 Name: fishui
-Version: 0.5
+Version: 0.7
 #Version: 0.3git.%%(date +%Y%m%d).%%{git_refspec_short}
 Release: 1%{?dist}
 License: GPLv3
