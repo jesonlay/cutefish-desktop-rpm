@@ -59,6 +59,7 @@ popd
 %{_bindir}/cutefish-xembedsniproxy
 %{_bindir}/cutefish-gmenuproxy
 %{_bindir}/cutefish-notificationd
+%{_bindir}/cutefish-sddm-helper
 %{_prefix}/lib/systemd/user/cutefish-gmenuproxy.service
 %{_datadir}/cutefish-polkit-agent
 %{_datadir}/cutefish-settings-daemon
@@ -66,6 +67,7 @@ popd
 %{_datadir}/cutefish-notificationd
 %{_datadir}/polkit-1/actions/com.cutefish.brightness.pkexec.policy
 %{_datadir}/polkit-1/actions/com.cutefish.cpufreq.pkexec.policy
+%{_datadir}/polkit-1/actions/com.cutefish.sddm.helper.pkexec.policy
 %{_datadir}/xsessions/cutefish-xsession.desktop
 %{_sysconfdir}/xdg/autostart/cutefish-polkit-agent.desktop
 %{_sysconfdir}/cutefish
