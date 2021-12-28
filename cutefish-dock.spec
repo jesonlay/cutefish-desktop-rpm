@@ -5,7 +5,7 @@
 %define component_name dock
 
 Name: cutefish-%{component_name}
-Version: 0.5
+Version: 0.7
 Release: 1%{?dist}
 License: GPLv3
 Summary: Desktop Taskbar for Cutefish Desktop
