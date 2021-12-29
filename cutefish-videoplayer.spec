@@ -54,3 +54,5 @@ cp -ax %{SOURCE1} %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %files
 %{_bindir}/%{name}
 %{_datadir}/applications/%{name}.desktop
+%{_datadir}/cutefish-videoplayer/translations/en_US.qm
+%{_datadir}/cutefish-videoplayer/translations/zh_CN.qm
